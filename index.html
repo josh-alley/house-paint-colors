@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>House Color Schemes</title>
+<meta name="description" content="Ten Sherwin-Williams exterior color schemes, each painted onto a photo of the house.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ten color schemes for the house">
+<meta property="og:description" content="Ten Sherwin-Williams exterior color schemes, each painted onto a photo of the house.">
+<meta property="og:url" content="https://josh-alley.github.io/house-paint-colors/">
+<meta property="og:image" content="https://josh-alley.github.io/house-paint-colors/img/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 15 16 5l12 10v13H4z' fill='%23B9B2A9'/%3E%3Cpath d='M2 16 16 4l14 12' fill='none' stroke='%23434341' stroke-width='3' stroke-linejoin='round'/%3E%3Crect x='13' y='19' width='6' height='9' fill='%23434341'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Federo&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html{color-scheme:light}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{
+  --bg:#EEF1F3; --surface:#F8FAFB; --ink:#1A2129; --muted:#55606B; --line:#D2D9DF;
+  --accent:#3A6EA5; --chip-ring:rgba(0,0,0,.14);
+  --bar:#3A6EA5; --grid:#D2D9DF; --dot-off:#CDD5DC;
+  --tip-bg:#1A2129; --tip-ink:#F8FAFB;
+  --display:"Federo","Optima","Candara","Segoe UI",sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,-apple-system,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161B; --surface:#182028; --ink:#E5EBF0; --muted:#9AA7B3; --line:#2A3540;
+    --accent:#8FB8E0; --chip-ring:rgba(255,255,255,.18);
+    --bar:#4F8BD0; --grid:#2A3540; --dot-off:#2E3A46;
+    --tip-bg:#E5EBF0; --tip-ink:#11161B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161B; --surface:#182028; --ink:#E5EBF0; --muted:#9AA7B3; --line:#2A3540;
+  --accent:#8FB8E0; --chip-ring:rgba(255,255,255,.18);
+  --bar:#4F8BD0; --grid:#2A3540; --dot-off:#2E3A46;
+  --tip-bg:#E5EBF0; --tip-ink:#11161B; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--body);padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1080px;margin:0 auto;display:grid;gap:40px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;letter-spacing:.01em}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1}
+h2{font-size:24px}
+p{margin:0}
+.eyebrow{font:500 12px/1.2 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+header{display:grid;gap:12px}
+header .lede{max-width:68ch;color:var(--muted);font-size:17px}
+.section-head{display:grid;gap:6px}
+.section-head p{color:var(--muted);max-width:68ch}
+
+/* before/after viewer */
+.stage{display:grid;gap:14px}
+.viewer{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:6px;background:#8e959a;user-select:none;touch-action:pan-y}
+.viewer img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.viewer .before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.divider{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.25);pointer-events:none}
+.divider::after{content:"";position:absolute;top:50%;left:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.35);
+  background-image:linear-gradient(90deg,transparent 9px,#333 9px,#333 11px,transparent 11px,transparent 23px,#333 23px,#333 25px,transparent 25px)}
+.tag{position:absolute;top:12px;padding:4px 9px;border-radius:3px;background:rgba(18,22,26,.72);color:#fff;font:500 12px/1.3 var(--mono);letter-spacing:.04em;pointer-events:none}
+.tag.l{left:12px}.tag.r{right:12px}
+.slider-row{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px}
+.slider-row input{flex:1;accent-color:var(--accent)}
+.slider-row label{white-space:nowrap}
+
+/* scheme picker */
+.picker{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.pick{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:12px;text-align:left;cursor:pointer;display:grid;gap:7px;align-content:start;font:inherit}
+.pick:hover{border-color:var(--muted)}
+.pick:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.pick[aria-pressed="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.strip{display:flex;height:26px;border-radius:3px;overflow:hidden;box-shadow:inset 0 0 0 1px var(--chip-ring)}
+.wood{background:linear-gradient(115deg,#9a6238,#b8794a 45%,#8d5833)}
+.pick .kind{font:500 11px/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pick b{font:400 18px/1.15 var(--display)}
+.pick small{color:var(--muted);font-size:13px;line-height:1.3}
+.shared{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;color:var(--muted);font-size:14px}
+.shared .sc{display:inline-flex;align-items:center;gap:8px;color:var(--ink)}
+.shared .sc i{flex:none;width:16px;height:16px;border-radius:3px;box-shadow:inset 0 0 0 1px var(--chip-ring)}
+
+/* detail card */
+.detail{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px}
+.detail .head{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.specs{display:grid;border-top:1px solid var(--line)}
+.spec{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.chip{width:52px;height:52px;border-radius:4px;box-shadow:inset 0 0 0 1px var(--chip-ring)}
+.spec .where{font-size:13px;color:var(--muted);line-height:1.3}
+.spec .name{font-weight:600;line-height:1.25}
+.spec .code{font:400 13px/1.3 var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.copy{appearance:none;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:4px;padding:6px 10px;font:500 12px/1 var(--mono);cursor:pointer;white-space:nowrap}
+.copy:hover{border-color:var(--muted)}
+.copy:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.why{display:grid;gap:16px}
+.why h3{font-size:17px;font-family:var(--body);font-weight:700}
+.why .watch p{color:var(--muted)}
+
+/* lightness chart: a table whose second column holds bars on a 0-100 scale */
+.lightness{display:grid;gap:14px}
+.lrv-card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 20px 16px;position:relative}
+table.lrv{border-collapse:collapse;width:100%}
+.lrv th,.lrv td{padding:0;text-align:left;vertical-align:middle}
+.lrv thead th{font:500 12px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-block:12px 8px}
+.lrv tr.grp th{font:500 11px/1.2 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-block:16px 2px;border-top:1px solid var(--line)}
+.lrv .paint{padding-block:10px;padding-right:16px;width:44%}
+.lrv .pname{display:flex;align-items:center;gap:10px;font-weight:600;line-height:1.25}
+.lrv .pname i{flex:none;width:18px;height:18px;border-radius:3px;box-shadow:inset 0 0 0 1px var(--chip-ring)}
+.lrv .pname small{font:400 12px/1.2 var(--mono);color:var(--muted);margin-left:6px}
+.lrv .use{display:block;font-size:13px;color:var(--muted);margin:3px 0 0 28px;line-height:1.3}
+.lrv .plot{border-left:1px solid var(--grid)}
+.lrv tbody tr[tabindex]{cursor:default}
+.lrv tbody tr:hover .bar,.lrv tbody tr:focus-visible .bar{filter:brightness(1.12)}
+.lrv tbody tr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.track{position:relative;height:36px;margin-right:52px}
+.bar{position:absolute;left:0;top:12px;height:12px;background:var(--bar);border-radius:0 4px 4px 0}
+.val{position:absolute;top:8px;font:600 15px/20px var(--body);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:8px}
+.ticks{position:relative;height:14px;margin-right:52px;font:400 12px/14px var(--mono);color:var(--muted);text-transform:none;letter-spacing:0}
+.ticks span{position:absolute;top:0}
+.ticks span:nth-child(2){transform:translateX(-50%)}
+.ticks span:last-child{transform:translateX(-100%)}
+.lrv-note{color:var(--muted);font-size:13px;margin-top:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.tooltip{position:absolute;pointer-events:none;background:var(--tip-bg);color:var(--tip-ink);border-radius:4px;padding:6px 9px;font-size:13px;line-height:1.3;white-space:nowrap;z-index:2}
+.tooltip b{display:block;font-size:15px}
+
+/* ratings */
+.score{display:grid;gap:12px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surface)}
+table.rate{border-collapse:collapse;width:100%;min-width:700px;font-size:15px}
+.rate th,.rate td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+.rate tr:last-child th,.rate tr:last-child td{border-bottom:0}
+.rate thead th{font:500 12px/1.25 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.rate tbody th{font:400 17px/1.2 var(--display);white-space:nowrap}
+.dots{display:inline-flex;gap:4px;vertical-align:middle;margin-right:8px}
+.dots i{width:9px;height:9px;border-radius:50%;background:var(--dot-off)}
+.dots i.on{background:var(--accent)}
+.rate td small{color:var(--muted)}
+.score .note{color:var(--muted);font-size:14px}
+
+/* all ten */
+.all{display:grid;gap:14px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+.thumb{appearance:none;border:0;padding:0;background:none;cursor:pointer;text-align:left;color:var(--ink);display:grid;gap:6px;font:inherit}
+.thumb img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:5px;display:block;outline:2px solid transparent;outline-offset:2px}
+.thumb[aria-pressed="true"] img{outline-color:var(--accent)}
+.thumb:focus-visible img{outline-color:var(--accent)}
+.thumb .cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px}
+.thumb .cap span{font:400 17px/1.2 var(--display)}
+.thumb .cap small{font:400 13px/1.2 var(--mono);color:var(--muted)}
+
+/* notes */
+.principles{display:grid;gap:16px}
+.plist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;margin:0;padding:0;list-style:none}
+.plist li{display:grid;gap:4px;align-content:start;padding-top:12px;border-top:1px solid var(--line)}
+.plist b{font-weight:700}
+.plist span{color:var(--muted)}
+.notes{display:grid;gap:10px}
+.notes ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.notes li{max-width:72ch}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:16px;display:grid;gap:6px}
+footer a{color:inherit}
+
+@media (max-width:820px){
+  .picker{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .detail{grid-template-columns:1fr;padding:18px}
+  .plist{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr}
+  .spec{grid-template-columns:44px minmax(0,1fr)}
+  .chip{width:44px;height:44px}
+  .spec .copy{grid-column:2;justify-self:start}
+  .lrv-card{padding:4px 14px 14px}
+  .lrv .paint{width:54%;padding-right:10px}
+  .lrv .use{margin-left:0}
+  .track,.ticks{margin-right:40px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Sherwin-Williams · Seattle Craftsman</div>
+    <h1>Ten color schemes for the house</h1>
+    <p class="lede">Each scheme is painted onto a photo of the house. All ten share the same white trim, soft-black window frames and porch, and natural cedar railings, so only the body color changes. Pick a scheme, then drag the slider to compare it with the house as it is today.</p>
+  </header>
+
+  <section class="stage" aria-label="Rendered scheme">
+    <div class="viewer" id="viewer" style="--pos:50%">
+      <img class="render" id="renderImg" src="img/greige.jpg" alt="The house rendered in the Warm Greige scheme">
+      <img class="before" src="img/orig.jpg" alt="The house as it is today">
+      <div class="divider" aria-hidden="true"></div>
+      <span class="tag l">Today</span>
+      <span class="tag r" id="renderTag">Warm Greige</span>
+    </div>
+    <div class="slider-row">
+      <label for="cmp">Today</label>
+      <input type="range" id="cmp" min="0" max="100" value="50" aria-label="Compare today with the new scheme">
+      <label for="cmp">New</label>
+    </div>
+    <div class="picker" id="picker" role="group" aria-label="Choose a scheme"></div>
+    <div class="shared">
+      <span class="eyebrow">Same in every scheme</span>
+      <span class="sc"><i style="background:#EDECE6" aria-hidden="true"></i>Pure White trim</span>
+      <span class="sc"><i style="background:#434341" aria-hidden="true"></i>Iron Ore frames, porch and steps</span>
+      <span class="sc"><i class="wood" aria-hidden="true"></i>Natural cedar railings</span>
+    </div>
+  </section>
+
+  <section class="detail" id="detail" aria-live="polite"></section>
+
+  <section class="all">
+    <h2>All ten side by side</h2>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="lightness">
+    <div class="section-head">
+      <h2>How light each paint is</h2>
+      <p>Light reflectance value (LRV) runs from 0 for black to 100 for white. The higher the number, the brighter the wall looks on a gray day.</p>
+    </div>
+    <div class="lrv-card" id="lrvCard">
+      <table class="lrv">
+        <thead><tr><th scope="col">Paint</th><th scope="col"><div class="ticks" aria-hidden="true"><span style="left:0">0</span><span style="left:50%">50</span><span style="left:100%">100</span></div><span class="sr">Lightness (LRV)</span></th></tr></thead>
+        <tbody id="lrvBody"></tbody>
+      </table>
+      <div class="tooltip" id="tip" hidden></div>
+      <p class="lrv-note">Approximate values, calculated from Sherwin-Williams' published color data.</p>
+    </div>
+  </section>
+
+  <section class="score">
+    <h2>How they compare</h2>
+    <div class="table-wrap">
+      <table class="rate">
+        <thead><tr><th scope="col">Scheme</th><th scope="col">Cheerful on gray days</th><th scope="col">Shows off the details</th><th scope="col">Broad buyer appeal</th><th scope="col">Stands apart from neighbors</th><th scope="col">Upkeep in Seattle</th></tr></thead>
+        <tbody id="scoreBody"></tbody>
+      </table>
+    </div>
+    <p class="note">These ratings are a designer's judgment, not survey data.</p>
+  </section>
+
+  <section class="principles">
+    <h2>How these were chosen</h2>
+    <ul class="plist">
+      <li><b>Only the body color changes.</b><span>Every scheme uses Pure White trim, Iron Ore window frames and porch, and cedar railings left natural. Three paints plus wood looks deliberate, and it makes the ten easy to compare.</span></li>
+      <li><b>Dark window frames.</b><span>Soft-black frames make the glass recede, so the leaded panes and the bay window read clearly from the street. On this house it's the most effective single change.</span></li>
+      <li><b>Light, mid-tone and deep.</b><span>The schemes run from light to dark. Light bodies feel brightest on gray days, mid-tones hide dirt and fading best, and deep colors are the boldest but fade sooner on sunny walls.</span></li>
+      <li><b>The neighbors.</b><span>Both neighboring houses are cool blue-gray with white trim. Warm neutrals, greens and olive stand apart from them, while the blue-grays blend into the block.</span></li>
+      <li><b>What sells.</b><span>Zillow's 2017 analysis of more than 32,000 photos of sold homes found that greige exteriors sold for more than comparable homes in medium brown or tan, which sold for less. Front doors from navy to slate gray also sold for more.</span></li>
+      <li><b>Left out on purpose.</b><span>Pastel and sky blues, dark greens, browns and tans, and all-white. On this house each one looked off, felt gloomy under Seattle skies, tends to sell for less, or needs more upkeep.</span></li>
+    </ul>
+  </section>
+
+  <section class="notes">
+    <h2>Before choosing</h2>
+    <ul>
+      <li>Narrow it to two or three, then buy sample quarts and paint 2 ft square boards. Look at them against the house on a gray day and a sunny one, since screens can't show paint exactly.</li>
+      <li>Suggested sheens: satin or low-luster on siding and shingles, semi-gloss on trim and window frames, and porch-and-floor enamel with an anti-slip additive on the steps.</li>
+      <li>With any of the light or mid-tone schemes, a front door in In the Navy adds one more accent.</li>
+      <li>The upper window is white vinyl, so it stays white in every rendering. That suits the white trim.</li>
+      <li>Exterior paint needs dry weather, so in Seattle plan the work for late spring through early fall.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Renderings are digital recolors of a photo of the house that keep its original light and shadow. Treat them as a guide, not a color match.</p>
+    <p>Color numbers and RGB values: <a href="https://images.sherwin-williams.com/content_images/sw-pdf-sherwin-williams-colorc.pdf" target="_blank" rel="noopener">Sherwin-Williams color list</a> and color pages for <a href="https://www.sherwin-williams.com/en-us/color/color-family/green-paint-colors/sw6206-oyster-bay" target="_blank" rel="noopener">Oyster Bay</a>, <a href="https://www.sherwin-williams.com/sherwinwilliams/SW9130-evergreen-fog" target="_blank" rel="noopener">Evergreen Fog</a>, <a href="https://www.sherwin-williams.com/en-us/color/color-family/blue-paint-colors/sw6249-storm-cloud" target="_blank" rel="noopener">Storm Cloud</a>, <a href="https://www.sherwin-williams.com/en-us/color/color-family/neutral-paint-colors/sw7743-mountain-road" target="_blank" rel="noopener">Mountain Road</a>, <a href="https://www.sherwin-williams.com/en-us/color/color-family/blue-paint-colors/sw6250-granite-peak" target="_blank" rel="noopener">Granite Peak</a> and <a href="https://www.sherwin-williams.com/sherwinwilliams/SW9178-in-the-navy" target="_blank" rel="noopener">In the Navy</a>. LRVs are calculated from those values. Resale data: <a href="https://zillow.mediaroom.com/2017-06-01-Homes-with-Blue-Bathrooms-Sell-for-5-400-More-than-Expected" target="_blank" rel="noopener">Zillow 2017 Paint Color Analysis</a>.</p>
+  </footer>
+</div>
+
+<script>
+const C = {
+  requisite:{name:"Requisite Gray",sw:"SW 7023",hex:"#B9B2A9",lrv:45},
+  oyster:{name:"Oyster Bay",sw:"SW 6206",hex:"#AEB3A9",lrv:44},
+  fog:{name:"Evergreen Fog",sw:"SW 9130",hex:"#95978A",lrv:30},
+  dovetail:{name:"Dovetail",sw:"SW 7018",hex:"#908A83",lrv:26},
+  mtnroad:{name:"Mountain Road",sw:"SW 7743",hex:"#868578",lrv:23},
+  storm:{name:"Storm Cloud",sw:"SW 6249",hex:"#7A848D",lrv:23},
+  granite:{name:"Granite Peak",sw:"SW 6250",hex:"#606B75",lrv:14},
+  pepper:{name:"Peppercorn",sw:"SW 7674",hex:"#585858",lrv:10},
+  navy:{name:"In the Navy",sw:"SW 9178",hex:"#283849",lrv:4},
+  pure:{name:"Pure White",sw:"SW 7005",hex:"#EDECE6",lrv:84},
+  iron:{name:"Iron Ore",sw:"SW 7069",hex:"#434341",lrv:6},
+  cedar:{name:"Natural cedar",sw:"Clear sealer",hex:null}
+};
+const DETAILS = [["Trim, columns, eaves, gutters","pure"],["Window frames, porch floor, steps, handrails, foundation","iron"],["Porch railings","cedar"]];
+// scores: cheerful on gray days, shows off the details, broad buyer appeal, stands apart from neighbors, upkeep
+const P = [
+  {id:"greige", title:"Warm Greige", kind:"Light · warm", short:"Soft gray-beige", body:[["Siding and shingles","requisite"]],
+   why:"Requisite Gray is a true greige, a balanced mix of gray and beige that doesn't lean tan or cold. At an LRV around 45 it looks bright on a gray day but hides dirt far better than white. Both neighbors are cool blue-gray, so a warm body color sets the house apart without looking loud. In Zillow's analysis of sold homes, greige exteriors sold for more than comparable homes in brown or tan.",
+   watch:"The white trim stands out less than on darker schemes, so the soft-black window frames and porch do much of the work. Greige can look flat on a small chip, so judge it on a large board outside.",
+   scores:[3,2,3,3,2]},
+  {id:"oyster", title:"Soft Sage", kind:"Light · green", short:"Pale gray-green", body:[["Siding and shingles","oyster"]],
+   why:"Oyster Bay is a pale gray-green that reads fresh and calm. It's as bright as Warm Greige with a hint of color, and it suits the evergreens and shrubs around the house.",
+   watch:"In flat light it can read more gray than green. It's similar in lightness to the house on the left, though greener.",
+   scores:[3,2,2,2,2]},
+  {id:"twotone", title:"Two-Tone Greige", kind:"Light over mid · warm", short:"Greige shingles over stone gray siding", body:[["Shingles, second floor","requisite"],["Lap siding, first floor","dovetail"]],
+   why:"The house already changes material at the belt course, with shingles above and lap siding below. Changing color on the same line, lighter above and deeper below, makes that detail a feature. The light upper floor stays bright under the deep eaves, and the deeper base grounds the house and hides splash and dirt. Both colors are neutrals with broad appeal.",
+   watch:"The extra color line at the belt course adds a little to the cost of the paint job. Judge the two colors together on sample boards, since each shifts next to the other.",
+   scores:[2,3,2,3,3]},
+  {id:"sage", title:"Garden Sage", kind:"Mid · green", short:"Soft gray-green", body:[["Siding and shingles","fog"]],
+   why:"Evergreen Fog, Sherwin-Williams' 2022 Color of the Year, is a soft gray-green with more color than the neutrals but nothing loud. It suits a Craftsman and the planting around the house, and it would be the only green on the block.",
+   watch:"Sage is fashionable right now, so it's a little more trend-driven than greige or gray. In low light it looks grayer than the chip.",
+   scores:[2,3,2,3,3]},
+  {id:"stone", title:"Stone Gray", kind:"Mid · warm", short:"Warm mid gray", body:[["Siding and shingles","dovetail"]],
+   why:"Dovetail is a warm mid gray with a hint of taupe. It's deep enough that the white columns, bay window and brackets stand out sharply, and warm enough to read differently from the cooler grays next door. Mid-tone grays are among the easiest exteriors to keep looking clean.",
+   watch:"It's the most subdued scheme. Next to the gray house on the left it reads as a warmer cousin rather than a clear contrast.",
+   scores:[2,3,3,2,3]},
+  {id:"storm", title:"Blue Gray", kind:"Mid · blue", short:"Muted blue-gray", body:[["Siding and shingles","storm"]],
+   why:"Storm Cloud is a muted blue-gray that gives a hint of blue without the weight of navy. Blue-gray with white trim is a familiar, well-liked look on Northwest houses, and the mid-tone body shows off the trim well.",
+   watch:"Both neighbors are cool blue-grays, so this scheme blends into the block more than the warmer ones.",
+   scores:[2,3,3,1,3]},
+  {id:"olive", title:"Craftsman Olive", kind:"Mid · olive", short:"Earthy olive-khaki", body:[["Siding and shingles","mtnroad"]],
+   why:"Mountain Road is an earthy olive-khaki in the spirit of traditional Arts and Crafts colors. It's warmer and more grounded than the sages and looks at home next to the cedar rails and the planting.",
+   watch:"It's the most particular taste in the set and can look drab on very gray days.",
+   scores:[1,3,2,3,3]},
+  {id:"slate", title:"Deep Slate", kind:"Deep · blue-gray", short:"Dark slate blue-gray", body:[["Siding and shingles","granite"]],
+   why:"Granite Peak is a deep slate with a blue cast. It's dramatic like navy but lighter and grayer, so it feels less heavy on overcast days, and the white trim stands out crisply against it.",
+   watch:"Dark colors fade sooner on walls that get strong afternoon sun. It shares the cool cast of both neighbors.",
+   scores:[1,3,2,2,2]},
+  {id:"charcoal", title:"Charcoal", kind:"Deep · neutral", short:"Soft charcoal", body:[["Siding and shingles","pepper"]],
+   why:"Peppercorn is a soft charcoal that reads modern and confident. Charcoal with white trim is one of the most popular looks for Craftsman houses, and it gives the trim maximum punch.",
+   watch:"The house looks heavier on gray days, and dark colors fade sooner on sunny walls. The soft-black details sit close to the body color, so they read more subtly here.",
+   scores:[1,3,3,2,2]},
+  {id:"navy", title:"Classic Navy", kind:"Deep · blue", short:"Deep navy", body:[["Siding and shingles","navy"]],
+   why:"Navy with white trim is a pairing almost every buyer recognizes, and it gives the columns and bay window the strongest contrast in the set. In the Navy is deep and rich while staying clearly blue.",
+   watch:"It's the darkest option by far, at an LRV around 4, so on gray afternoons it can read close to black. Dark colors also fade sooner on sunny walls.",
+   scores:[1,3,3,2,2]}
+];
+P.forEach(p=>{
+  p.specs = p.body.concat(DETAILS);
+  const bodyFlex = 4 / p.body.length;
+  p.strip = p.body.map(([,k])=>[k,bodyFlex]).concat([["pure",1.6],["iron",1],["cedar",.8]]);
+  p.paints = p.body.map(([,k])=>C[k].name).join(" over ");
+});
+const SCORE_LABELS=[["Low","Medium","High"],["Low","Medium","High"],["Narrower","Good","Broad"],["Low","Medium","High"],["More work","Average","Easy"]];
+const LRV_ROWS=[
+  ["requisite","Warm Greige; Two-Tone Greige second floor"],
+  ["oyster","Soft Sage"],
+  ["fog","Garden Sage"],
+  ["dovetail","Stone Gray; Two-Tone Greige first floor"],
+  ["mtnroad","Craftsman Olive"],
+  ["storm","Blue Gray"],
+  ["granite","Deep Slate"],
+  ["pepper","Charcoal"],
+  ["navy","Classic Navy"],
+  ["Trim and details in every scheme"],
+  ["pure","Trim, columns, eaves, gutters"],
+  ["iron","Window frames, porch, steps, handrails"]
+];
+
+const $ = s => document.querySelector(s);
+const viewer = $("#viewer"), cmp = $("#cmp"), img = $("#renderImg"), tag = $("#renderTag");
+const picker = $("#picker"), grid = $("#grid"), detail = $("#detail");
+const bg = k => C[k].hex ? `background:${C[k].hex}` : "";
+const cls = k => C[k].hex ? "" : "wood";
+
+picker.innerHTML = P.map(p=>`<button class="pick" type="button" id="pick-${p.id}" data-id="${p.id}" aria-pressed="false">
+  <div class="strip" aria-hidden="true">${p.strip.map(([k,f])=>`<span class="${cls(k)}" style="flex:${f};${bg(k)}"></span>`).join("")}</div>
+  <span class="kind">${p.kind}</span><b>${p.title}</b><small>${p.short}</small></button>`).join("");
+grid.innerHTML = P.map(p=>`<button class="thumb" type="button" id="thumb-${p.id}" data-id="${p.id}" aria-pressed="false">
+  <img src="img/thumb/${p.id}.jpg" alt="${p.title} scheme on the house" loading="lazy" width="800" height="600"><span class="cap"><span>${p.title}</span><small>${p.paints}</small></span></button>`).join("");
+$("#scoreBody").innerHTML = P.map(p=>`<tr><th scope="row">${p.title}</th>${p.scores.map((s,i)=>`<td><span class="dots" aria-hidden="true">${[1,2,3].map(k=>`<i class="${k<=s?'on':''}"></i>`).join("")}</span><small>${SCORE_LABELS[i][s-1]}</small></td>`).join("")}</tr>`).join("");
+
+const lrvBody = $("#lrvBody");
+LRV_ROWS.forEach(row=>{
+  if(row.length===1){
+    const tr=document.createElement("tr"); tr.className="grp";
+    const th=document.createElement("th"); th.colSpan=2; th.scope="colgroup"; th.textContent=row[0];
+    tr.append(th); lrvBody.append(tr); return;
+  }
+  const [k,use]=row, c=C[k];
+  const tr=document.createElement("tr"); tr.tabIndex=0; tr.dataset.k=k;
+  const td1=document.createElement("td"); td1.className="paint";
+  const pn=document.createElement("div"); pn.className="pname";
+  const sw=document.createElement("i"); sw.style.background=c.hex; sw.setAttribute("aria-hidden","true");
+  const nm=document.createElement("span"); nm.textContent=c.name+" ";
+  const code=document.createElement("small"); code.textContent=c.sw; nm.appendChild(code);
+  pn.append(sw,nm);
+  const us=document.createElement("span"); us.className="use"; us.textContent=use;
+  td1.append(pn,us);
+  const td2=document.createElement("td"); td2.className="plot";
+  const track=document.createElement("div"); track.className="track";
+  const bar=document.createElement("div"); bar.className="bar"; bar.style.width=c.lrv+"%";
+  const val=document.createElement("div"); val.className="val"; val.style.left=c.lrv+"%"; val.textContent="≈"+c.lrv;
+  track.append(bar,val); td2.append(track);
+  tr.append(td1,td2); lrvBody.append(tr);
+});
+const tip=$("#tip"), card=$("#lrvCard");
+function showTip(tr, x, y){
+  const c=C[tr.dataset.k];
+  tip.textContent="";
+  const b=document.createElement("b"); b.textContent="LRV ≈"+c.lrv;
+  const s=document.createElement("span"); s.textContent=c.name+" reflects about "+c.lrv+"% of the light that hits it";
+  tip.append(b,s); tip.hidden=false;
+  const r=card.getBoundingClientRect(), tw=tip.offsetWidth;
+  let left=x-r.left+12; if(left+tw>r.width-8) left=Math.max(8,x-r.left-tw-12);
+  tip.style.left=left+"px"; tip.style.top=(y-r.top-tip.offsetHeight-10)+"px";
+}
+lrvBody.addEventListener("pointermove", e=>{const tr=e.target.closest("tr[tabindex]"); if(tr) showTip(tr,e.clientX,e.clientY); else tip.hidden=true;});
+lrvBody.addEventListener("pointerleave", ()=>{tip.hidden=true;});
+lrvBody.addEventListener("focusin", e=>{const tr=e.target.closest("tr[tabindex]"); if(!tr) return; const r=tr.querySelector(".bar").getBoundingClientRect(); showTip(tr,r.right,r.top);});
+lrvBody.addEventListener("focusout", ()=>{tip.hidden=true;});
+
+function renderDetail(p){
+  const rows = p.specs.map(([where,k])=>{
+    const c=C[k];
+    const chip = `<div class="chip ${cls(k)}" style="${bg(k)}"></div>`;
+    const code = c.hex ? `${c.sw} · ${c.hex} · LRV ≈${c.lrv}` : "Keep as is, refresh the clear sealer";
+    const btn = c.hex ? `<button class="copy" type="button" data-copy="${c.name} ${c.sw}">Copy</button>` : "";
+    return `<div class="spec">${chip}<div><div class="where">${where}</div><div class="name">${c.name}</div><div class="code">${code}</div></div>${btn}</div>`;
+  }).join("");
+  detail.innerHTML = `<div class="head"><span class="eyebrow">${p.kind}</span><h2>${p.title}</h2></div>
+    <div class="specs">${rows}</div>
+    <div class="why"><div><h3>Why it works</h3><p>${p.why}</p></div><div class="watch"><h3>Watch for</h3><p>${p.watch}</p></div></div>`;
+}
+function select(id, push){
+  const p = P.find(x=>x.id===id) || P[0];
+  img.src = `img/${p.id}.jpg`; img.alt = `The house rendered in the ${p.title} scheme`;
+  tag.textContent = p.title;
+  document.querySelectorAll(".pick,.thumb").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.id===p.id)));
+  renderDetail(p);
+  if(push){ try{ history.replaceState(null,"","#"+p.id); }catch(e){} }
+}
+picker.addEventListener("click", e=>{const b=e.target.closest(".pick"); if(b) select(b.dataset.id,true);});
+grid.addEventListener("click", e=>{const b=e.target.closest(".thumb"); if(b){ select(b.dataset.id,true); viewer.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}});
+detail.addEventListener("click", async e=>{
+  const b=e.target.closest(".copy"); if(!b) return;
+  try{ await navigator.clipboard.writeText(b.dataset.copy); b.textContent="Copied"; }
+  catch(err){ const r=document.createRange(); r.selectNodeContents(b.previousElementSibling.querySelector(".name")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent="Selected"; }
+  setTimeout(()=>{b.textContent="Copy";},1400);
+});
+function setPos(v){ viewer.style.setProperty("--pos", v+"%"); }
+cmp.addEventListener("input", ()=>setPos(cmp.value));
+let dragging=false;
+function fromPointer(e){ const r=viewer.getBoundingClientRect(); const v=Math.max(0,Math.min(100,(e.clientX-r.left)/r.width*100)); cmp.value=v; setPos(v); }
+viewer.addEventListener("pointerdown", e=>{dragging=true; viewer.setPointerCapture(e.pointerId); fromPointer(e);});
+viewer.addEventListener("pointermove", e=>{ if(dragging) fromPointer(e); });
+viewer.addEventListener("pointerup", ()=>{dragging=false;});
+viewer.addEventListener("pointercancel", ()=>{dragging=false;});
+const start = (location.hash||"").slice(1);
+select(P.some(p=>p.id===start)?start:"greige", false);
+</script>
+</body>
+</html>
