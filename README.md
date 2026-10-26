@@ -1,6 +1,6 @@
 # House paint colors
 
-Seven exterior color schemes from Sherwin-Williams and Benjamin Moore, each rendered on a photo of the house, with a before-and-after slider, color names and numbers, and notes on each option. Every scheme uses cream trim and a warm terracotta or red accent on the window sashes and column capitals.
+Eight exterior color schemes from Sherwin-Williams and Benjamin Moore, each rendered on a photo of the house, with a before-and-after slider, color names and numbers, and notes on each option.
 
 Live page: https://josh-alley.github.io/house-paint-colors/
 
