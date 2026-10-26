@@ -191,7 +191,7 @@ footer a{color:inherit}
   <header>
     <div class="eyebrow">Sherwin-Williams and Benjamin Moore · Seattle Craftsman</div>
     <h1>Seven color schemes for the house</h1>
-    <p class="lede">Each scheme is painted onto a photo of the house, from the greens through a warm gray to the blues. They share one trim-and-accent package: cream trim, one deep red-brown on the window sashes, column capitals, porch floor and stair treads, and black handrails. Only the wall color changes. Pick a scheme, then drag the slider to compare it with the house as it is today.</p>
+    <p class="lede">Each scheme is painted onto a photo of the house, from the greens through a warm gray to the blues. They share one trim-and-accent package: cream trim, and one deep red-brown on the window sashes, column capitals, porch floor, stair treads and handrails. Only the wall color changes. Pick a scheme, then drag the slider to compare it with the house as it is today.</p>
   </header>
 
   <section class="stage" aria-label="Rendered scheme">
@@ -211,8 +211,8 @@ footer a{color:inherit}
     <div class="shared">
       <span class="eyebrow">In every scheme</span>
       <span class="sc"><i style="background:#EFE8DB" aria-hidden="true"></i>Creamy trim</span>
-      <span class="sc"><i style="background:#5D3831" aria-hidden="true"></i>Fiery Brown sashes, capitals, porch floor and treads</span>
-      <span class="sc"><i style="background:#2F2F30" aria-hidden="true"></i>Tricorn Black handrails and foundation</span>
+      <span class="sc"><i style="background:#5D3831" aria-hidden="true"></i>Fiery Brown sashes, capitals, porch floor, treads and handrails</span>
+      <span class="sc"><i style="background:#2F2F30" aria-hidden="true"></i>Tricorn Black foundation</span>
       <span class="sc">Van Deusen Blue uses the Benjamin Moore equivalents: Linen White, Tudor Brown and Wrought Iron</span>
     </div>
   </section>
@@ -253,11 +253,11 @@ footer a{color:inherit}
   <section class="principles">
     <h2>How these were chosen</h2>
     <ul class="plist">
-      <li><b>Three colors, plus black.</b><span>Each scheme has a wall color, a cream for the trim, and one warm accent, the traditional three-part way of painting a house of this age. Black appears only on the thin elements, the handrails and the foundation strip.</span></li>
+      <li><b>Three colors.</b><span>Each scheme has a wall color, a cream for the trim, and one warm accent, the traditional three-part way of painting a house of this age. The only other paint is a near-black on the foundation strip, where it reads as a shadow line.</span></li>
       <li><b>Cream, not white.</b><span>A warm cream sits comfortably next to red-brown and wood, and looks soft rather than stark on gray days. In this photo the cream covers nearly half of the painted surface (eaves, porch ceiling, columns, trim and risers), which keeps every scheme bright, even the navy.</span></li>
-      <li><b>One accent, repeated.</b><span>The window sashes, the column capitals, the porch floor and the stair treads share one deep red-brown, so the windows and the entry read as one system rather than two different darks side by side. In this photo the accent covers about a tenth of the painted surface, enough to notice without taking over.</span></li>
+      <li><b>One accent, repeated.</b><span>The window sashes, the column capitals, the porch floor, the stair treads and the handrails share one deep red-brown, so the windows and the entry read as one system rather than several different darks side by side. In this photo the accent covers about a tenth of the painted surface, enough to notice without taking over.</span></li>
       <li><b>It builds on what's there.</b><span>Today the sashes and the front door are reddish stained wood, the stairs are painted brown and the column capitals carry a terracotta band. Fiery Brown keeps that warmth, a shade deeper and more muted.</span></li>
-      <li><b>Two-color stairs.</b><span>Red-brown treads with cream risers make each step stand out, and the dark treads hide dirt. The treads face the sky, so they look a little lighter and redder than the chip. The black handrails read as one crisp line across them.</span></li>
+      <li><b>Two-color stairs.</b><span>Red-brown treads with cream risers make each step stand out, and the dark treads hide dirt. The treads face the sky, so they look a little lighter and redder than the chip. The handrails take the same red-brown, so they read as part of the stair, like stained wood rails.</span></li>
       <li><b>The neighbors.</b><span>Both neighboring houses are cool blue-gray with white trim. Cream trim and warm accents set every scheme apart from them, even the blues, and the greens and Downing Stone contrast most.</span></li>
     </ul>
   </section>
@@ -270,7 +270,7 @@ footer a{color:inherit}
       <li>The window sashes are stained wood today. Painting them means sanding and priming first. Keeping the wood is an option, but it's lighter and more orange than Fiery Brown, so it won't match the stairs.</li>
       <li>Suggested sheens: satin or low-luster on siding and shingles, semi-gloss on trim and sashes, and porch-and-floor enamel with an anti-slip additive on the steps.</li>
       <li>The porch railings are cedar, which bleeds brown tannin stains through paint. Have the painter use a stain-blocking primer first.</li>
-      <li>The handrails are tan cedar today, so every scheme paints them black.</li>
+      <li>The handrails are tan cedar today, so every scheme paints them the accent color. If you ever replace them with metal rails, black is the usual choice and works with every scheme.</li>
       <li>Cream risers show scuffs. Use porch-and-floor enamel on the stairs and plan on occasional touch-ups.</li>
       <li>Every scheme keeps the existing stained wood front door, which is already close to the red-brown accent. The door is mostly hidden behind the left column in this photo.</li>
       <li>The upper window is white vinyl, so it stays white in every rendering. Painting vinyl a dark color isn't recommended, since dark paint absorbs heat and can warp it.</li>
@@ -321,47 +321,47 @@ const C = {
 // scores: cheerful on gray days, fits a 1910s Craftsman, broad buyer appeal, stands apart from neighbors, upkeep
 const P = [
   {id:"olive", title:"Craftsman Olive", kind:"Light over mid · olive", short:"Olive siding, sage-gray shingles",
-   body:[["Shingles, second floor","escape"],["Lap siding, first floor","mtnroad"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Shingles, second floor","escape"],["Lap siding, first floor","mtnroad"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Mountain Road is an earthy olive-khaki, and olive, cream and a red-brown make a classic Arts and Crafts trio. The second-floor shingles are Escape Gray, a lighter sage-gray that keeps the top of the house from looking heavy under the deep eaves.",
    watch:"Olive is a more particular taste than the greens and blues, and the color change at the belt course adds a little to the cost of the paint job.",
    scores:[2,3,2,3,3]},
   {id:"pewter", title:"Pewter Green", kind:"Mid-deep · gray-green", short:"Deep gray-green with red-brown accents",
-   body:[["Siding and shingles","pewter"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Siding and shingles","pewter"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Pewter Green is a deep gray-green with a soft, mossy cast. Dark green, cream and a mahogany red-brown is one of the classic Craftsman combinations, and the green would be the only one on the block. The cream trim keeps the house bright under the deep eaves.",
    watch:"On gray afternoons it reads darker and grayer than in sun, and dark colors fade sooner on walls that get strong afternoon sun.",
    scores:[2,3,2,3,2]},
   {id:"basil", title:"Basil", kind:"Mid-deep · green", short:"Clear mid green with red-brown accents",
-   body:[["Siding and shingles","basil"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Siding and shingles","basil"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Basil has more green in it than Pewter Green and is a little lighter, so it looks fresh even under cloud. Red-brown sits nearly opposite green on the color wheel, so the sashes and stairs warm it up, and the cream trim keeps the porch bright. It's the most cheerful of the greens.",
    watch:"A clear green is a more personal choice than a gray-green, so it appeals to a slightly narrower group of buyers. In strong sun it can look brighter than the chip.",
    scores:[3,3,2,3,2]},
   {id:"downing", title:"Downing Stone", kind:"Light-mid · warm gray", short:"Warm gray with cream and red-brown",
-   body:[["Siding and shingles","downing"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Siding and shingles","downing"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Downing Stone, from Sherwin-Williams' Historic Color collection, is a soft gray with a hint of green, lighter than every other wall color here. It stays quiet so the cream trim and the red-brown sashes, capitals and stairs can carry the house. It's the most cheerful scheme on a gray day and the easiest to keep looking clean.",
    watch:"Because the wall color is light and neutral, the accents do most of the work. With white trim and no accent it would look plain, so keep the cream and the red-brown together.",
    scores:[3,3,3,2,3]},
   {id:"vandeusen", title:"Van Deusen Blue", kind:"Mid-deep · blue", short:"Classic blue with brown accents",
-   body:[["Siding and shingles","vandeusen"]], trim:"linen", accent:"tudor", porch:"tudor", rail:"wrought", door:"wood",
-   why:"Van Deusen Blue, from Benjamin Moore's Historical Colors collection, is a classic deep blue, clearer than Deep Slate and lighter than Classic Navy. Linen White trim keeps it warm, and Tudor Brown on the sashes, capitals and stairs adds a warm note against the blue. All four paints come from Benjamin Moore.",
+   body:[["Siding and shingles","vandeusen"]], trim:"linen", accent:"tudor", porch:"tudor", rail:"tudor", found:"wrought", door:"wood",
+   why:"Van Deusen Blue, from Benjamin Moore's Historical Colors collection, is a classic deep blue, clearer than Deep Slate and lighter than Classic Navy. Linen White trim keeps it warm, and Tudor Brown on the sashes, capitals, stairs and handrails adds a warm note against the blue. All four paints come from Benjamin Moore.",
    watch:"It shares the cool cast of both neighbors, though the cream and brown set it apart. Tudor Brown is a little browner and less red than the Fiery Brown on the other schemes. Dark colors fade sooner on sunny walls.",
    scores:[2,3,3,2,2]},
   {id:"slate", title:"Deep Slate", kind:"Mid-deep · blue-gray", short:"Dark slate with red-brown accents",
-   body:[["Siding and shingles","granite"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Siding and shingles","granite"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Granite Peak is a deep slate with a blue cast, dramatic like navy but lighter and grayer. A cool wall color with cream trim and a warm red-brown accent is a time-tested pairing, and the warm accent brings the slate to life.",
    watch:"Dark colors fade sooner on walls that get strong afternoon sun. It shares the cool cast of both neighbors.",
    scores:[2,2,2,2,2]},
   {id:"navy", title:"Classic Navy", kind:"Deep · navy", short:"Deep navy with red-brown accents",
-   body:[["Siding and shingles","navy"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"tricorn", door:"wood",
+   body:[["Siding and shingles","navy"]], trim:"creamy", accent:"fiery", porch:"fiery", rail:"fiery", found:"tricorn", door:"wood",
    why:"Navy with cream trim is a pairing almost every buyer recognizes. The red-brown sashes, capitals and stairs add warmth, so the house reads rich rather than severe, and the cream columns and railings stand out crisply against the navy.",
    watch:"It's the darkest option by far, at an LRV of about 4, so on gray afternoons the walls can read close to black, and the red-brown sashes are low-contrast against it. Dark colors also fade sooner on sunny walls.",
    scores:[1,2,3,2,2]}
 ];
 const brandOf = k => C[k].code.startsWith("BM") ? "Benjamin Moore" : "Sherwin-Williams";
-const ROLE_LABELS = {trim:"trim, columns, porch railings, stair risers, eaves, gutters", accent:"window sashes, column capital bands", porch:"porch floor, stair treads", rail:"handrails, foundation"};
+const ROLE_LABELS = {trim:"trim, columns, porch railings, stair risers, eaves, gutters", accent:"window sashes, column capital bands", porch:"porch floor, stair treads", rail:"handrails", found:"foundation"};
 P.forEach(p=>{
   const rows = p.body.slice();
   const groups = [];
-  [["trim",p.trim],["accent",p.accent],["porch",p.porch],["rail",p.rail]].forEach(([role,k])=>{
+  [["trim",p.trim],["accent",p.accent],["porch",p.porch],["rail",p.rail],["found",p.found]].forEach(([role,k])=>{
     let g = groups.find(x=>x.k===k);
     if(!g){ g={k, roles:[]}; groups.push(g); }
     g.roles.push(role);
@@ -391,10 +391,10 @@ const LRV_ROWS=[
   ["Trim and accent colors"],
   ["creamy","Trim on the six Sherwin-Williams schemes"],
   ["linen","Trim on Van Deusen Blue"],
-  ["wrought","Handrails and foundation on Van Deusen Blue"],
-  ["tudor","Sashes, column capitals, porch floor and stair treads on Van Deusen Blue"],
-  ["fiery","Sashes, column capitals, porch floor and stair treads on the six Sherwin-Williams schemes"],
-  ["tricorn","Handrails and foundation on the six Sherwin-Williams schemes"]
+  ["wrought","Foundation on Van Deusen Blue"],
+  ["tudor","Sashes, column capitals, porch floor, stair treads and handrails on Van Deusen Blue"],
+  ["fiery","Sashes, column capitals, porch floor, stair treads and handrails on the six Sherwin-Williams schemes"],
+  ["tricorn","Foundation on the six Sherwin-Williams schemes"]
 ];
 
 const $ = s => document.querySelector(s);
